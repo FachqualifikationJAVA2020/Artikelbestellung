@@ -18,6 +18,14 @@ public final class Bestellung {
         return count;
     }
 
+    public Artikel getBestellartikel() {
+        return bestellartikel;
+    }
+
+    public void setBestellartikel(Artikel bestellartikel) {
+        this.bestellartikel = bestellartikel;
+    }
+
     public void setCount(int count) {
         this.count = count < 0 ? 0 : count;
     }
