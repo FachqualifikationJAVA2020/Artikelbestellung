@@ -26,5 +26,10 @@ public class Bestelltest {
         Bestellung duplo = new Bestellung(artikel.getDescription(), artikel.getCost(),4);
         System.out.println(duplo.toString());
 
+        // Description kann nicht verändert werden
+        // artikel.description = "Neues Hanutu";
+
+
+
     }
 }
