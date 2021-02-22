@@ -9,6 +9,7 @@ public class Artikel {
         this.description = description;
     }
 
+
     public double getCost() {
         return cost;
     }

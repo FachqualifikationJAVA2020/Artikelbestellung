@@ -1,12 +1,17 @@
 package de.thunderfrog;
 
-public final class Bestellung extends Artikel{
+public final class Bestellung {
 
+    private Artikel bestellartikel;
     private int count = 1;
 
-    public Bestellung(String description, double cost, int count) {
-        super(description, cost);
-        this.count = count < 0 ? 0 : count;
+    public Bestellung(Artikel bestellartikel, int count) {
+       this.bestellartikel = bestellartikel;
+       setCount(count);
+    }
+
+    public Bestellung(Artikel bestellartikel) {
+        this.bestellartikel = bestellartikel;
     }
 
     public int getCount() {
@@ -18,12 +23,12 @@ public final class Bestellung extends Artikel{
     }
 
     public double gesamtpreis(){
-        return getCost() * count;
+        return bestellartikel.getCost() * count;
     }
 
     @Override
     public String toString(){
-        return count + "x " + getDescription() + " kosten: " + gesamtpreis();
+        return count + "x " + bestellartikel.getDescription() + " kosten: " + gesamtpreis();
     }
 
 }
