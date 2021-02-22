@@ -1,8 +1,8 @@
 package de.thunderfrog;
 
 public class Artikel {
-    protected double cost = 0.00;
-    protected final String description;
+    private double cost = 0.00;
+    private final String description;
 
     public Artikel(String description, double cost){
         this.cost = cost;

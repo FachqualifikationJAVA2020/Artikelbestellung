@@ -2,7 +2,7 @@ package de.thunderfrog;
 
 public final class Bestellung extends Artikel{
 
-    protected int count;
+    private int count = 1;
 
     public Bestellung(String description, double cost, int count) {
         super(description, cost);
@@ -18,12 +18,12 @@ public final class Bestellung extends Artikel{
     }
 
     public double gesamtpreis(){
-        return cost * count;
+        return getCost() * count;
     }
 
     @Override
     public String toString(){
-        return count + "x " + description + " kosten: " + gesamtpreis();
+        return count + "x " + getDescription() + " kosten: " + gesamtpreis();
     }
 
 }
